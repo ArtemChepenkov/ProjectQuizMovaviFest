@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/styles/style.css">
+    <title>QuizSite</title>
+</head>
+
+<body>
+    <header class="bg-dark">
+        <div class="container-fluid d-flex">
+            <a href="/" class="btn btn-primary">На главную</a>
+        </div>
+    </header>
+
+    <main>
+        <form action="/create_question" method="post" enctype="multipart/form-data">
+            <div class="picture_quiz_question">
+                <span id="output" class="image_quiz"><img src="/static/images/default_picture.png"></span><br>
+                <div class="image_input">
+                    <div class="input-group mb-3">
+                        <input type="file" name="question_picture" accept="image/*" class="form-control" id="file">
+                        <!-- <label class="input-group-text" for="inputGroupFile02">Загрузить</label>                              -->
+                    </div>
+                </div>
+            </div>
+            <input type="text" name="question" placeholder="Введите вопрос">
+            <div class="block">
+                
+                <div class="class">
+                    <div class="first question_class">
+                        <input type="checkbox" name="first_checkbox" id="first_checkbox">
+                        <input type="text" name="first_answer">
+                    </div>
+
+                    <div class="second question_class">
+                        <input type="checkbox" name="second_checkbox" id="second_checkbox">
+                        <input type="text" name="second_answer">
+                    </div>
+                </div>
+
+                <div class="class">
+                    <div class="third question_class">
+                        <input type="checkbox" name="third_checkbox" id="third_checkbox">
+                        <input type="text" name="third_answer">
+                    </div>
+
+                    <div class="fourth question_class">
+                        <input type="checkbox" name="fourth_checkbox" id="fourth_checkbox">
+                        <input type="text" name="fourth_answer">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success" >Создать</button>
+        </form>
+        <a href="/" class="btn btn-info">Закончить создание викторины</a>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
+<script src="/static/scripts/script.js"></script>
